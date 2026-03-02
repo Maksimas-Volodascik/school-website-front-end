@@ -76,30 +76,6 @@ const NavBar = () => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="settings">
-              <ListItemIcon sx={{ color: "inherit" }}>
-                <SettingsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Settings" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} to="family-tree">
-              <ListItemIcon sx={{ color: "inherit" }}>
-                <FamilyIcon />
-              </ListItemIcon>
-              <ListItemText primary="Family tree" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} to="learning-material">
-              <ListItemIcon sx={{ color: "inherit" }}>
-                <MenuBookIcon />
-              </ListItemIcon>
-              <ListItemText primary="Learning material" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
             <ListItemButton component={Link} to="calendar">
               <ListItemIcon sx={{ color: "inherit" }}>
                 <CalendarMonthIcon />

@@ -42,11 +42,13 @@ const Grades = () => {
     queryFn: () => gradesBySubject(startOfMonth, selectedSubject),
     staleTime: 1000 * 60 * 5,
   });
+
   const { data: subjects = [] } = useQuery({
     queryKey: ["classSubjects"],
     queryFn: () => getClassSubjects(),
     staleTime: Infinity, //fetch data once
   });
+
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
   const [anchorEl, setAnchorEl] = useState(null);
   const [selectedCellId, setSelectedCellId] = useState(0, 0, 0);
@@ -203,7 +205,7 @@ const Grades = () => {
             <FormControl size="small" sx={{ width: 160 }}>
               <InputLabel>Subjects</InputLabel>
               <Select value={selectedSubject} onChange={handleSubjectChange}>
-                {subjects.map((subject) => (
+                {subjects.data?.map((subject) => (
                   <MenuItem value={subject.id}>{subject.subjectName}</MenuItem>
                 ))}
               </Select>
@@ -248,7 +250,7 @@ const Grades = () => {
             </TableHead>
 
             <TableBody>
-              {studentGrades.map((student) => (
+              {studentGrades.data?.map((student) => (
                 <TableRow key={student.firstName + student.lastName}>
                   <TableCell
                     sx={{

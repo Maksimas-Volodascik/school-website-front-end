@@ -50,7 +50,7 @@ const Classes = () => {
             overflow: "auto",
           }}
         >
-          {classes.map((data) => (
+          {classes.data.map((data) => (
             <Paper
               key={data.subjectCode}
               sx={{

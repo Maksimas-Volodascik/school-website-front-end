@@ -105,6 +105,7 @@ const StudentList = () => {
               />
             </Box>
             <UserTable
+              data-testid="student-table"
               rows={rows}
               columns={columns}
               onDelete={(data) => handleOnDelete(data)}

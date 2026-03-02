@@ -32,7 +32,7 @@ const TeacherList = () => {
   ];
 
   const rows =
-    teachers?.map((teacher) =>
+    teachers.data?.map((teacher) =>
       createData(
         teacher.id,
         teacher.firstName,
