@@ -40,6 +40,6 @@ The project uses JWT for authentication.
 Access tokens are stored locally using `localStorage.setItem("accessToken", accessToken)` to control access to protected routes.
 Unauthenticated users can only access public routes, such as the login page.
 
-#Testing
+# Testing
 Vitest was used for basic unit testing.
 Currently only Login Form tests are covered.
